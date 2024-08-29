@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiple Lottie Animations</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"></script>
+        <style>
+            .lottie-container {
+                width: 90px;
+                height: 90px;
+                margin: 20px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="lottie-animation1" class="lottie-container"></div>
+        <div id="lottie-animation2" class="lottie-container"></div>
+        <div id="lottie-animation3" class="lottie-container"></div>
+        <div id="lottie-animation4" class="lottie-container"></div>
+        <script>
+            // Load the first animation
+            lottie.loadAnimation({
+                container: document.getElementById('lottie-animation1'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'lottie/animation1.json' // path to the first animation JSON file
+            });
+            // Load the second animation
+            lottie.loadAnimation({
+                container: document.getElementById('lottie-animation2'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'lottie/animation2.json' // path to the second animation JSON file
+            });
+            // Load the third animation
+            lottie.loadAnimation({
+                container: document.getElementById('lottie-animation3'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'lottie/animation3.json' // path to the third animation JSON file
+            });
+            // Load the forth animation
+            lottie.loadAnimation({
+                container: document.getElementById('lottie-animation4'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'lottie/animation4.json' // path to the third animation JSON file
+            });
+        </script>
+    </body>
+</html>
