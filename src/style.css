@@ -126,6 +126,7 @@ Hero
     cursor: pointer;
     font-family: var(--heading);
     text-transform: uppercase;
+    color: #000;
 }
 
 :hover.yellow-btn {
