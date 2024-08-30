@@ -574,12 +574,7 @@ Service Philosophy
 /*
 Features
 */
-.features-section h2 {
-    font-size: 4rem;
-    font-family: var(--heading);
-    text-align: center;
-    text-transform: uppercase;
-}
+
 
 .features-grid {
     display: grid;
@@ -587,31 +582,27 @@ Features
     grid-template-rows: auto;
     padding: 2rem;
     gap: 2rem;
+    width: 100%;
 }
 
 .feature-grid-cell {
-    border: #000 4px solid;
+    border-bottom: #fff 4px solid;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding: 1rem;
+    background-color: #000;
 }
 
-.red-cell {
-    background-color: var(--primary);
+.feature-grid-cell p {
+    text-align: left;
+    padding: 0;
 }
 
-.yellow-cell {
-    background-color: var(--secondary);
-}
+
 
 /*
 How it Works
 */
-.how-it-works-section h2 {
-    font-size: 4rem;
-    font-family: var(--heading);
-    text-align: center;
-    text-transform: uppercase;
-}
+
 
 .how-grid {
     display: grid;
@@ -622,7 +613,7 @@ How it Works
 }
 
 .dev-stages {
-    background-color: var(--primary);
+    background-color: var(--dark-grey);
     padding: 1rem;
     border: #000 solid 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -714,11 +705,12 @@ Pricing Section
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: auto;
     gap: 1rem;
+    width: 100%;
 }
 
 .package-cell {
     min-height: 50vh;
-    background-color: var(--primary);
+    background-color: var(--dark-grey);
     border: #000 solid 4px;
     grid-column: span 2;
     display: flex;
@@ -729,7 +721,7 @@ Pricing Section
 
 .hosting-cell {
     min-height: 50vh;
-    background-color: var(--primary);
+    background-color: var(--dark-grey);
     border: #000 solid 4px;
     padding: 1rem;
     display: flex;
@@ -803,7 +795,7 @@ Pricing Section
 .price-questions {
     font-family: var(--heading);
     font-size: 4rem;
-    background-color: var(--primary);
+    background-color: var(--dark-grey);
     border: #000 solid 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -902,6 +894,7 @@ Pricing Section
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
 }
 
 .contact-form {
