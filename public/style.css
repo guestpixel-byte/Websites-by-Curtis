@@ -257,6 +257,7 @@ Overview
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .section-title {
@@ -372,8 +373,9 @@ Snapshot
 
 .services-snapshot {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: auto;
+    width: 100%;
 }
 
 .service-box {
