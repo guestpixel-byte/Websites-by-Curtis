@@ -20,7 +20,7 @@
     --light-black: #1e1e1e;
 
     --heading: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    --text: sans-serif;
+    --text: 'Chakra Petch';
     --special: 'Coolvetica';
 
 }
@@ -36,7 +36,11 @@
 body {
     background-color: #333333;
     font-family: var(--text);
-
+    background-image: url('/assets/white-dots.png');
+    background-size: contain;
+    background-position: center;
+    z-index: -2; /* Places the background behind the content */
+    color: white;
 }
 
 .page {
@@ -50,6 +54,7 @@ body {
     min-height: 200vh;
     width: 100%;
     max-width: 80rem;
+    padding: 1rem;
 
 }
 
@@ -66,7 +71,7 @@ Hero
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-image: url('/assets/dark-bg.png');
     background-size: cover;
     background-position: center;
@@ -173,9 +178,13 @@ Below Fold
     justify-items: center;
 }
 
+.latest-badge {
+    padding: 1rem;
+}
+
 @media (max-width: 768px) {
     .fold-grid-cell h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .fold-grid-cell {
@@ -183,9 +192,11 @@ Below Fold
     }
 
     .fold-grid-cell img {
-        height: 90px;
-        width: 90px;
+        height: 70px;
+        width: 70px;
     }
+
+    
 }
 
 @media (max-width: 512px) {
@@ -202,10 +213,7 @@ Below Fold
         font-size: 1rem;
     }
 
-    .fold-grid-cell img {
-        height: 60px;
-        width: 60px;
-    }
+
 
 }
 
@@ -240,14 +248,30 @@ Trusted By
 /*
 Overview
 */
-.section-title {
-    font-family: var(--heading);
-    font-size: 2rem;
+.overview {
+    background-color: var(--light-black);
+    padding: 3rem 1rem;
+    border: #000 4px solid;
+    border-radius: 33px;
+    box-shadow: 2px 2px 2px rgba(100, 64, 202, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section-title span {
-    color: var(--primary);
+.section-title {
+    font-family: var(--special);
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    width: fit-content;
+    border: #000 solid 4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: .2rem 1rem;
+    color: #000;
 }
+
+
 
 .sub-heading {
     text-transform: uppercase;
@@ -256,6 +280,7 @@ Overview
 
 .overview p {
     padding: .5rem 1rem;
+    text-align: center;
 
 }
 
@@ -267,6 +292,7 @@ Overview
     border: #000 solid 4px;
     font-family: var(--special);
 }
+
 
 .overview-grid-cell {
     display: flex;
@@ -290,6 +316,23 @@ Overview
     font-size: 3rem;
     text-align: center;
     font-family: var(--special);
+    background-color: var(--secondary);
+    padding: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    color: #000;
+    border-top: solid 4px #000;
+    border-bottom: solid 4px #000;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem
+    }
+
+    .text-banner {
+        font-size: 2.5rem;
+    }
 }
 
 /*
@@ -326,6 +369,7 @@ Small Grid
 /*
 Snapshot
 */
+
 .services-snapshot {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -340,44 +384,45 @@ Snapshot
     margin: 1rem;
     border: solid 4px #000;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    min-height: 12rem;
+    min-height: 4rem;
     justify-content: center;
     align-items: center;
+    color: #000;
 }
 
-.tag {
-    background-color: var(--primary);
-    display: inline-block;
-    padding: .25rem;
-    border: solid 2px #000;
+.service-box h2 {
+    font-family: var(--special);
     text-transform: uppercase;
-    font-weight: 600;
+    letter-spacing: 1.1px;
 }
+
 
 .header-snapshot h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 4rem;
-    font-family: var(--heading);
+    font-family: var(--special);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    background-color: var(--secondary);
+    color: #000;
+    padding: 1rem;
+    border: #000 solid 4px;
 }
 
 .revisions-banner {
-    background-color: var(--primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    border: solid 4px #000;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     margin: 1rem;
 }
 
 .revisions-banner h2 {
-    font-family: var(--heading);
-    color: white;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    font-family: var(--special);
     font-size: 3rem;
     text-transform: uppercase;
+    letter-spacing: 1.1px;
 }
 
 .p-center {
