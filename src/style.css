@@ -27,6 +27,8 @@
 
 html {
     scroll-behavior: smooth;
+    
+    
 }
 
 /* Reset */
@@ -72,7 +74,7 @@ Hero
     top: 0;
     left: 0;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background-image: url('/assets/dark-bg.png');
     background-size: cover;
     background-position: center;
@@ -86,8 +88,8 @@ Hero
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 3rem 0;
-    margin: 1rem 0;
+    padding-top: 1rem;
+
     background-image: url('/assets/white-dots.png');
     background-size: contain;
     background-position: center;
@@ -95,11 +97,14 @@ Hero
     background-color: var(--dark-grey);
     border: 2px solid #fff;
     border-radius: 18px;
+    z-index: -2;
 }
+
+
 
 .hero-logo {
     width: 100%;
-    padding: 2rem;
+    padding: 4rem 4rem 0 4rem;
 }
 
 .hero-image {
@@ -140,8 +145,7 @@ Below Fold
 .fold {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    gap: 1rem;
+
 }
 
 .fold-grid-cell h2 {
@@ -176,22 +180,26 @@ Below Fold
 
 .two-col-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1rem;
     justify-items: center;
 }
 
 .latest-badge {
     padding: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
 }
 
 .latest-badge img {
-    width: 12rem;
+    width: 8rem;
 }
 
 .fold-grid-cell img {
-    height: 70px;
-    width: 70px;
+    height: 55px;
+    width: 55px;
 }
 
 @media (max-width: 768px) {
@@ -203,20 +211,6 @@ Below Fold
 }
 
 @media (max-width: 612px) {
-    .fold {
-        flex-direction: column;
-
-    }
-
-    .latest-badge {
-        order: 3;
-    }
-
-    .fold-grid-cell h2 {
-        font-size: 1rem;
-    }
-
-
 
 }
 
