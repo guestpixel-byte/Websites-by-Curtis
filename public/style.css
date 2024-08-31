@@ -25,6 +25,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset */
 * {
     margin: 0;
