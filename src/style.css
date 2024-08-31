@@ -738,12 +738,14 @@ Pricing Section
     grid-template-rows: auto;
     gap: 1rem;
     width: 100%;
+    padding: 1rem;
 }
 
 .package-cell {
     min-height: 50vh;
     background-color: var(--dark-grey);
     border: #000 solid 4px;
+    box-shadow: 2px 2px 2px rgba(100, 64, 202, 0.8);
     grid-column: span 2;
     display: flex;
     align-items: center;
@@ -755,6 +757,7 @@ Pricing Section
     min-height: 50vh;
     background-color: var(--dark-grey);
     border: #000 solid 4px;
+    box-shadow: 2px 2px 2px rgba(100, 64, 202, 0.8);
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -790,7 +793,9 @@ Pricing Section
 }
 
 .package-info {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
     width: 100%;
 }
 
@@ -839,6 +844,12 @@ Pricing Section
 @media (max-width: 768px) {
     .package-cell {
         grid-column: span 1;
+    }
+}
+
+@media (max-width: 420px) {
+    .package-info {
+        flex-direction: column;
     }
 }
 
