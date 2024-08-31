@@ -397,25 +397,31 @@ Small Grid
 Snapshot
 */
 
-.services-snapshot {
+.grid-three-col {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-template-rows: auto;
     width: 100%;
+    gap: 1rem;
 }
 
 .service-box {
+    background-color: var(--dark-grey);
+    padding: 1rem;
+    border: #000 4px solid;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px rgba(100, 64, 202, 0.8);
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: var(--secondary);
-    margin: 1rem;
-    border: solid 4px #000;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    min-height: 4rem;
-    justify-content: center;
     align-items: center;
-    color: #000;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 8rem;
+}
+
+.service-box:hover {
+    background-color: var(--light-black);
 }
 
 .service-box h2 {
@@ -451,6 +457,7 @@ Snapshot
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1.1px;
+    text-align: center;
 }
 
 .p-center {
