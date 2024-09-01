@@ -45,6 +45,7 @@ body {
     background-image: url('/assets/white-dots.png');
     background-size: contain;
     background-position: center;
+    background-size: 719px;
     z-index: -2; /* Places the background behind the content */
     color: white;
 }
@@ -68,6 +69,10 @@ body {
 /*
 Hero
 */
+.hero {
+    width: 100%;
+}
+
 .hero-container::before {
     content: "";
     position: absolute;
@@ -76,7 +81,7 @@ Hero
     width: 100%;
     height: 100vh;
     background-image: url('/assets/dark-bg.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     z-index: -1; /* Places the background behind the content */
 }
@@ -89,7 +94,6 @@ Hero
     justify-content: center;
     text-align: center;
     padding-top: 1rem;
-
     background-image: url('/assets/white-dots.png');
     background-size: contain;
     background-position: center;
@@ -97,7 +101,7 @@ Hero
     background-color: var(--dark-grey);
     border: 2px solid #fff;
     border-radius: 18px;
-    z-index: -2;
+
 }
 
 
@@ -105,6 +109,7 @@ Hero
 .hero-logo {
     width: 100%;
     padding: 4rem 4rem 0 4rem;
+    max-width: 60rem;
 }
 
 .hero-image {
@@ -172,6 +177,11 @@ Below Fold
     border: #000 solid 4px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     max-width: 100%;
+    text-decoration: none;
+}
+
+.fold-grid-cell:hover {
+    transform: scale(1.1);
 }
 
 .fold-links {
